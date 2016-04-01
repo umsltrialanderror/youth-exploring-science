@@ -54,14 +54,22 @@
 		6327426B1CA380F60013A311 /* YouthExploringScience */ = {
 			isa = PBXGroup;
 			children = (
-				6327426C1CA380F60013A311 /* AppDelegate.swift */,
+				B2AC41211CAF22030039CC1B /* Base Classes */,
 				6327426E1CA380F60013A311 /* ViewController.swift */,
 				632742701CA380F60013A311 /* Main.storyboard */,
+			);
+			path = YouthExploringScience;
+			sourceTree = "<group>";
+		};
+		B2AC41211CAF22030039CC1B /* Base Classes */ = {
+			isa = PBXGroup;
+			children = (
+				6327426C1CA380F60013A311 /* AppDelegate.swift */,
 				632742731CA380F60013A311 /* Assets.xcassets */,
 				632742751CA380F60013A311 /* LaunchScreen.storyboard */,
 				632742781CA380F60013A311 /* Info.plist */,
 			);
-			path = YouthExploringScience;
+			name = "Base Classes";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
