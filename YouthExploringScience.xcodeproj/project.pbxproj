@@ -8,19 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		6327426D1CA380F60013A311 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327426C1CA380F60013A311 /* AppDelegate.swift */; };
-		6327426F1CA380F60013A311 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327426E1CA380F60013A311 /* ViewController.swift */; };
+		6327426F1CA380F60013A311 /* TEHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6327426E1CA380F60013A311 /* TEHomeViewController.swift */; };
 		632742721CA380F60013A311 /* TEMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632742701CA380F60013A311 /* TEMain.storyboard */; };
 		632742741CA380F60013A311 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 632742731CA380F60013A311 /* Assets.xcassets */; };
 		632742771CA380F60013A311 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 632742751CA380F60013A311 /* LaunchScreen.storyboard */; };
 		B2AC41281CAF72760039CC1B /* TENews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2AC41271CAF72760039CC1B /* TENews.storyboard */; };
 		B2AC412A1CAF727F0039CC1B /* TECalendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2AC41291CAF727F0039CC1B /* TECalendar.storyboard */; };
 		B2AC412C1CAF728C0039CC1B /* TEContact.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2AC412B1CAF728C0039CC1B /* TEContact.storyboard */; };
+		B2AC413A1CAF765E0039CC1B /* TENewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC41391CAF765E0039CC1B /* TENewsViewController.swift */; };
+		B2AC413C1CAF76AC0039CC1B /* TECalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC413B1CAF76AC0039CC1B /* TECalendarViewController.swift */; };
+		B2AC413E1CAF76EF0039CC1B /* TEContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC413D1CAF76EF0039CC1B /* TEContactViewController.swift */; };
+		B2AC41421CAF79A20039CC1B /* TEMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2AC41411CAF79A20039CC1B /* TEMainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		632742691CA380F60013A311 /* YouthExploringScience.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouthExploringScience.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6327426C1CA380F60013A311 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6327426E1CA380F60013A311 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6327426E1CA380F60013A311 /* TEHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TEHomeViewController.swift; sourceTree = "<group>"; };
 		632742711CA380F60013A311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TEMain.storyboard; sourceTree = "<group>"; };
 		632742731CA380F60013A311 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		632742761CA380F60013A311 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +32,10 @@
 		B2AC41271CAF72760039CC1B /* TENews.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TENews.storyboard; sourceTree = "<group>"; };
 		B2AC41291CAF727F0039CC1B /* TECalendar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TECalendar.storyboard; sourceTree = "<group>"; };
 		B2AC412B1CAF728C0039CC1B /* TEContact.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TEContact.storyboard; sourceTree = "<group>"; };
+		B2AC41391CAF765E0039CC1B /* TENewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TENewsViewController.swift; sourceTree = "<group>"; };
+		B2AC413B1CAF76AC0039CC1B /* TECalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TECalendarViewController.swift; sourceTree = "<group>"; };
+		B2AC413D1CAF76EF0039CC1B /* TEContactViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TEContactViewController.swift; sourceTree = "<group>"; };
+		B2AC41411CAF79A20039CC1B /* TEMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TEMainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +99,9 @@
 		B2AC41231CAF225B0039CC1B /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				6327426E1CA380F60013A311 /* ViewController.swift */,
+				B2AC41381CAF73040039CC1B /* Controllers */,
+				B2AC41371CAF72FF0039CC1B /* Views */,
+				B2AC41361CAF72FA0039CC1B /* Models */,
 				632742701CA380F60013A311 /* TEMain.storyboard */,
 			);
 			name = Home;
@@ -100,6 +110,9 @@
 		B2AC41241CAF72360039CC1B /* News */ = {
 			isa = PBXGroup;
 			children = (
+				B2AC41351CAF72F20039CC1B /* Controllers */,
+				B2AC41341CAF72EB0039CC1B /* Views */,
+				B2AC41331CAF72E70039CC1B /* Models */,
 				B2AC41271CAF72760039CC1B /* TENews.storyboard */,
 			);
 			name = News;
@@ -108,6 +121,9 @@
 		B2AC41251CAF724D0039CC1B /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				B2AC41321CAF72DF0039CC1B /* Controllers */,
+				B2AC41311CAF72DA0039CC1B /* Views */,
+				B2AC41301CAF72D40039CC1B /* Models */,
 				B2AC41291CAF727F0039CC1B /* TECalendar.storyboard */,
 			);
 			name = Calendar;
@@ -116,9 +132,101 @@
 		B2AC41261CAF72550039CC1B /* Contact */ = {
 			isa = PBXGroup;
 			children = (
+				B2AC412F1CAF72C90039CC1B /* Controllers */,
+				B2AC412E1CAF72C40039CC1B /* Views */,
+				B2AC412D1CAF72BD0039CC1B /* Models */,
 				B2AC412B1CAF728C0039CC1B /* TEContact.storyboard */,
 			);
 			name = Contact;
+			sourceTree = "<group>";
+		};
+		B2AC412D1CAF72BD0039CC1B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B2AC412E1CAF72C40039CC1B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B2AC412F1CAF72C90039CC1B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2AC413D1CAF76EF0039CC1B /* TEContactViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B2AC41301CAF72D40039CC1B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B2AC41311CAF72DA0039CC1B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B2AC41321CAF72DF0039CC1B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2AC413B1CAF76AC0039CC1B /* TECalendarViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B2AC41331CAF72E70039CC1B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B2AC41341CAF72EB0039CC1B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B2AC41351CAF72F20039CC1B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2AC41391CAF765E0039CC1B /* TENewsViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B2AC41361CAF72FA0039CC1B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B2AC41371CAF72FF0039CC1B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B2AC41381CAF73040039CC1B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6327426E1CA380F60013A311 /* TEHomeViewController.swift */,
+				B2AC41411CAF79A20039CC1B /* TEMainViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,8 +304,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6327426F1CA380F60013A311 /* ViewController.swift in Sources */,
+				B2AC41421CAF79A20039CC1B /* TEMainViewController.swift in Sources */,
+				B2AC413A1CAF765E0039CC1B /* TENewsViewController.swift in Sources */,
+				6327426F1CA380F60013A311 /* TEHomeViewController.swift in Sources */,
+				B2AC413E1CAF76EF0039CC1B /* TEContactViewController.swift in Sources */,
 				6327426D1CA380F60013A311 /* AppDelegate.swift in Sources */,
+				B2AC413C1CAF76AC0039CC1B /* TECalendarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
