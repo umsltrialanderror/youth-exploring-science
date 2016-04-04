@@ -14,6 +14,7 @@ class TEContactViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.barTintColor = yes_red
     }
 
     override func didReceiveMemoryWarning() {

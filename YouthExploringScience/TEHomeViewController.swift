@@ -10,9 +10,24 @@ import UIKit
 
 class TEHomeViewController: UIViewController {
 
+    var titleView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("This is just something so commit.")
+        
+        let image = UIImage(named: "yes_nav_logo");
+        titleView = UIImageView(image: image);
+        
+        //        theImageView.image = theImageView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
+//        theImageView.tintColor = UIColor.redColor()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(animated);
+        
+//        titleView.bounds = (self.navigationController?.navigationBar.bounds)!
+        self.navigationItem.titleView = titleView;
     }
 
     override func didReceiveMemoryWarning() {

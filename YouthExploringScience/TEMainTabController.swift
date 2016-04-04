@@ -1,19 +1,20 @@
 //
-//  TEMainViewController.swift
+//  TEMainTabController.swift
 //  YouthExploringScience
 //
-//  Created by Bradley on 4/1/16.
+//  Created by Bradley on 4/3/16.
 //  Copyright © 2016 St. Louis Science Center. All rights reserved.
 //
 
 import UIKit
 
-class TEMainViewController: UITabBarController {
+class TEMainTabController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.tabBar.tintColor = UIColor.whiteColor()
     }
 
     override func didReceiveMemoryWarning() {

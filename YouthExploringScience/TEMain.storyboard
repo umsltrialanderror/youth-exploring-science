@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ofx-EO-KtL">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Main Tab Controller-->
+        <scene sceneID="yfY-Dr-S38">
+            <objects>
+                <tabBarController id="Ofx-EO-KtL" customClass="TEMainTabController" customModule="YouthExploringScience" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="Z3L-Ta-w3q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.81176470590000005" green="0.26274509800000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="mN9-fj-rLg" kind="relationship" relationship="viewControllers" id="TgS-fV-U5s"/>
+                        <segue destination="Agj-lI-y5D" kind="relationship" relationship="viewControllers" id="eg0-rh-Ymu"/>
+                        <segue destination="xmr-Pv-92Z" kind="relationship" relationship="viewControllers" id="6Di-Sc-Az0"/>
+                        <segue destination="3ad-Oi-KNM" kind="relationship" relationship="viewControllers" id="mXh-Op-qA0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cIE-PD-c8k" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-850" y="187"/>
+        </scene>
+        <!--TEHome-->
+        <scene sceneID="8Ox-sE-0Po">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TEHome" id="mN9-fj-rLg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="era-tP-nmu"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vIj-xt-3Zq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-164.5" y="-148"/>
+        </scene>
+        <!--TEContact-->
+        <scene sceneID="HLX-xS-pM3">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TEContact" id="3ad-Oi-KNM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="smE-Wu-J4E"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dRA-3G-Qy2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-168" y="-1"/>
+        </scene>
+        <!--TENews-->
+        <scene sceneID="2Mj-Ar-Suj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TENews" id="Agj-lI-y5D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="xut-z2-naI"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C2y-pZ-40j" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-175.5" y="61"/>
+        </scene>
+        <!--TECalendar-->
+        <scene sceneID="fFz-HS-JQQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TECalendar" id="xmr-Pv-92Z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="whl-1n-ZmX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tXc-Gx-O1A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-165" y="-72"/>
+        </scene>
+    </scenes>
+</document>

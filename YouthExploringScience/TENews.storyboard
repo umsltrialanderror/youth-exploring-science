@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="grs-eq-5dv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lWc-aP-NsX">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--News View Controller-->
-        <scene sceneID="cGJ-tW-mTM">
+        <scene sceneID="Q9d-GB-nKm">
             <objects>
-                <viewController id="grs-eq-5dv" customClass="TENewsViewController" customModule="YouthExploringScience" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WcX-iW-e1r" customClass="TENewsViewController" customModule="YouthExploringScience" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TmD-cv-LeM"/>
-                        <viewControllerLayoutGuide type="bottom" id="gMQ-hP-Xch"/>
+                        <viewControllerLayoutGuide type="top" id="9ir-wA-QsA"/>
+                        <viewControllerLayoutGuide type="bottom" id="q6g-1V-wwr"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="vJp-JS-hnR">
+                    <view key="view" contentMode="scaleToFill" id="nQf-wq-czn">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxQ-au-rUA">
-                                <rect key="frame" x="218" y="289.5" width="164" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cfz-9l-TZx">
+                                <rect key="frame" x="258" y="290" width="84" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,14 +26,36 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mxQ-au-rUA" firstAttribute="centerY" secondItem="vJp-JS-hnR" secondAttribute="centerY" id="AVQ-M9-3R6"/>
-                            <constraint firstItem="mxQ-au-rUA" firstAttribute="centerX" secondItem="vJp-JS-hnR" secondAttribute="centerX" id="NJp-Wg-HIB"/>
+                            <constraint firstItem="Cfz-9l-TZx" firstAttribute="centerX" secondItem="nQf-wq-czn" secondAttribute="centerX" id="Nvi-kv-Obh"/>
+                            <constraint firstItem="Cfz-9l-TZx" firstAttribute="centerY" secondItem="nQf-wq-czn" secondAttribute="centerY" id="aaJ-Ul-a86"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="569-ue-cwf"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vIA-xs-3GK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HbJ-dJ-MeW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="264" y="222"/>
+            <point key="canvasLocation" x="1762" y="513"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="Ijw-UZ-Ftl">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lWc-aP-NsX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="News" id="lq3-54-lmO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ms3-Tp-Xb7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.81176470590000005" green="0.26274509800000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="WcX-iW-e1r" kind="relationship" relationship="rootViewController" id="AB5-SW-dYY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O7B-HS-Siu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950" y="513"/>
         </scene>
     </scenes>
 </document>

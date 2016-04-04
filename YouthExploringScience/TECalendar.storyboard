@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jjk-iR-rH0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uti-jL-1cd">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Calendar View Controller-->
-        <scene sceneID="fIF-Ng-qZp">
+        <scene sceneID="uZ0-N4-lRh">
             <objects>
-                <viewController id="jjk-iR-rH0" customClass="TECalendarViewController" customModule="YouthExploringScience" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="0rS-2E-d0t" customClass="TECalendarViewController" customModule="YouthExploringScience" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Uvq-lT-Nj1"/>
-                        <viewControllerLayoutGuide type="bottom" id="wVn-BK-Szs"/>
+                        <viewControllerLayoutGuide type="top" id="wmG-m5-nRa"/>
+                        <viewControllerLayoutGuide type="bottom" id="geu-Tp-g1m"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="bHg-ih-awg">
+                    <view key="view" contentMode="scaleToFill" id="t3j-6B-ZP4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar View Controller" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pLQ-N5-8AN">
-                                <rect key="frame" x="205" y="289.5" width="190" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBK-AW-SUC">
+                                <rect key="frame" x="245" y="289.5" width="110.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -26,14 +26,35 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pLQ-N5-8AN" firstAttribute="centerY" secondItem="bHg-ih-awg" secondAttribute="centerY" id="5km-2O-8jW"/>
-                            <constraint firstItem="pLQ-N5-8AN" firstAttribute="centerX" secondItem="bHg-ih-awg" secondAttribute="centerX" id="iP8-Xk-KbI"/>
+                            <constraint firstItem="GBK-AW-SUC" firstAttribute="centerX" secondItem="t3j-6B-ZP4" secondAttribute="centerX" id="Yzl-ls-Zwv"/>
+                            <constraint firstItem="GBK-AW-SUC" firstAttribute="centerY" secondItem="t3j-6B-ZP4" secondAttribute="centerY" id="jxi-mn-2dj"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="pea-4Z-CxH"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8xw-iK-j6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iCP-sX-53z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="310" y="355"/>
+            <point key="canvasLocation" x="1762" y="-148"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="ReC-J8-oM2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uti-jL-1cd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calendar" id="3DM-IH-Zgj"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9G3-lC-tpo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0rS-2E-d0t" kind="relationship" relationship="rootViewController" id="cFJ-Bf-DNB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="puq-9b-L2A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950" y="-148"/>
         </scene>
     </scenes>
 </document>
