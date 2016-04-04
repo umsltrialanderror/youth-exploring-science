@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -16,7 +17,63 @@
                     <view key="view" contentMode="scaleToFill" id="1kf-6L-pXj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="zTK-Vy-o24">
+                                <rect key="frame" x="20" y="124" width="560" height="367"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="led-WN-avI">
+                                        <rect key="frame" x="0.0" y="0.0" width="560" height="45"/>
+                                        <state key="normal" image="students_btn_unselected"/>
+                                        <connections>
+                                            <action selector="mainButtonClicked:" destination="QjY-g7-cL9" eventType="touchUpInside" id="Ast-6g-iSI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xd8-lb-ZhZ">
+                                        <rect key="frame" x="0.0" y="80.5" width="560" height="45"/>
+                                        <state key="normal" image="partners_btn_unselected"/>
+                                        <connections>
+                                            <action selector="mainButtonClicked:" destination="QjY-g7-cL9" eventType="touchUpInside" id="xaa-dI-tUE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sXp-NU-mNZ">
+                                        <rect key="frame" x="0.0" y="161" width="560" height="45"/>
+                                        <state key="normal" image="yeswebsite_btn_unselected"/>
+                                        <connections>
+                                            <action selector="mainButtonClicked:" destination="QjY-g7-cL9" eventType="touchUpInside" id="aZ0-OC-nYA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAL-1z-d6v">
+                                        <rect key="frame" x="0.0" y="241.5" width="560" height="45"/>
+                                        <state key="normal" image="slscwebsite_btn_unselected"/>
+                                        <connections>
+                                            <action selector="mainButtonClicked:" destination="QjY-g7-cL9" eventType="touchUpInside" id="Nr8-eG-ZXI"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2O-Om-edP">
+                                        <rect key="frame" x="0.0" y="322" width="560" height="45"/>
+                                        <state key="normal" image="paylocity_button_unselected"/>
+                                        <connections>
+                                            <action selector="mainButtonClicked:" destination="QjY-g7-cL9" eventType="touchUpInside" id="1jB-Yo-E0l"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Wu-dW-Ani" firstAttribute="top" secondItem="zTK-Vy-o24" secondAttribute="bottom" constant="60" id="K5l-l4-Sdp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="zTK-Vy-o24" secondAttribute="trailing" id="YkJ-e4-LKh"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="zTK-Vy-o24" secondAttribute="leading" id="dys-rh-iVz"/>
+                            <constraint firstItem="zTK-Vy-o24" firstAttribute="top" secondItem="pTr-UG-Z7I" secondAttribute="bottom" constant="60" id="n1x-Jc-iP1"/>
+                            <constraint firstItem="zTK-Vy-o24" firstAttribute="centerY" secondItem="1kf-6L-pXj" secondAttribute="centerY" id="vy9-by-7Su"/>
+                            <constraint firstItem="zTK-Vy-o24" firstAttribute="centerX" secondItem="1kf-6L-pXj" secondAttribute="centerX" id="yfL-Fr-eY7"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="vy9-by-7Su"/>
+                                <exclude reference="yfL-Fr-eY7"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="oep-8h-d7H"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -46,4 +103,11 @@
             <point key="canvasLocation" x="270" y="-148"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="partners_btn_unselected" width="188" height="45"/>
+        <image name="paylocity_button_unselected" width="188" height="45"/>
+        <image name="slscwebsite_btn_unselected" width="188" height="45"/>
+        <image name="students_btn_unselected" width="188" height="45"/>
+        <image name="yeswebsite_btn_unselected" width="188" height="45"/>
+    </resources>
 </document>

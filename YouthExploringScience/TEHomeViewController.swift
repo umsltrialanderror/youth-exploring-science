@@ -11,25 +11,26 @@ import UIKit
 class TEHomeViewController: UIViewController {
 
     var titleView: UIImageView!
+    var homeModel : TEHomeViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        homeModel = TEHomeViewModel()
+        
         let image = UIImage(named: "yes_nav_logo");
         titleView = UIImageView(image: image);
-        
-        //        theImageView.image = theImageView.image!.imageWithRenderingMode(UIImageRenderingMode.AlwaysTemplate)
-//        theImageView.tintColor = UIColor.redColor()
+        self.navigationItem.titleView = titleView;
+
     }
     
-    override func viewWillAppear(animated: Bool) {
+    @IBAction func mainButtonClicked(sender: AnyObject) {
         
-        super.viewWillAppear(animated);
-        
-//        titleView.bounds = (self.navigationController?.navigationBar.bounds)!
-        self.navigationItem.titleView = titleView;
+        homeModel.ActionClicked(sender.tag)
     }
-
+    
+    
+    //MARK: Memory Management Methods
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
