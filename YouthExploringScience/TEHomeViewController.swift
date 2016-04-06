@@ -29,6 +29,19 @@ class TEHomeViewController: UIViewController {
         homeModel.ActionClicked(sender.tag)
     }
     
+//    @IBAction func paylocityButtonClicked(sender: AnyObject) {
+//        if let url = NSURL(string: "https://login.paylocity.com/Escher/Escher_WebUI/views/login/login.aspx") {
+//            UIApplication.sharedApplication().openURL(url)
+//        }
+//    }
+//    
+//    @IBAction func slscButtonClicked(sender: AnyObject) {
+//        if let url = NSURL(string: "http://www.slsc.org/") {
+//            UIApplication.sharedApplication().openURL(url)
+//        }
+//    }
+
+    
     
     //MARK: Memory Management Methods
     override func didReceiveMemoryWarning() {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ofx-EO-KtL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Ofx-EO-KtL">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
         <!--Main Tab Controller-->
@@ -16,8 +16,8 @@
                         <color key="barTintColor" red="0.81176470590000005" green="0.26274509800000001" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="mN9-fj-rLg" kind="relationship" relationship="viewControllers" id="TgS-fV-U5s"/>
                         <segue destination="Agj-lI-y5D" kind="relationship" relationship="viewControllers" id="eg0-rh-Ymu"/>
+                        <segue destination="mN9-fj-rLg" kind="relationship" relationship="viewControllers" id="TgS-fV-U5s"/>
                         <segue destination="xmr-Pv-92Z" kind="relationship" relationship="viewControllers" id="6Di-Sc-Az0"/>
                         <segue destination="3ad-Oi-KNM" kind="relationship" relationship="viewControllers" id="mXh-Op-qA0"/>
                     </connections>

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class TEHomeViewModel {
     
@@ -23,10 +24,15 @@ class TEHomeViewModel {
             break;
             
         case 3: print("SLSC Website Clicked.") //open slsc website url
-            break;
+            if let url = NSURL(string: "http://www.slsc.org/") {
+                UIApplication.sharedApplication().openURL(url)
+            }
+            
             
         case 4: print("Paylocity Clicked.") //open paylocity url
-            break;
+            if let url = NSURL(string: "https://login.paylocity.com/Escher/Escher_WebUI/views/login/login.aspx") {
+                UIApplication.sharedApplication().openURL(url)
+            }
             
         default: break;
         }
