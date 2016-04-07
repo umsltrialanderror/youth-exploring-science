@@ -10,16 +10,24 @@ import UIKit
 
 class TECalendarViewController: UIViewController {
 
+    let webView:UIWebView = UIWebView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height * 0.8))
+    let url = NSURL(string: "https://calendar.google.com/calendar/embed?src=guido997%40gmail.com&ctz=America/Chicago")
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.barTintColor = yes_red;
+        webView.center.y = UIScreen.mainScreen().bounds.height / 2
+        view.addSubview(webView)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        let request = NSURLRequest(URL: url!)
+        webView.loadRequest(request)
     }
     
 

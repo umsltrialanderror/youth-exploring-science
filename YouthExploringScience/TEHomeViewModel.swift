@@ -14,22 +14,28 @@ class TEHomeViewModel {
     func ActionClicked(index: Int){
         
         switch (index){
-        case 0: print("Students clicked.") //open students url
-            break
+        case 0:  //open students url
+            if let url = NSURL(string: "http://www.google.org/") {
+                UIApplication.sharedApplication().openURL(url)
+            }
             
-        case 1: print("Partners Clicked.")//open partners url
-            break;
+        case 1: //open partners url
+            if let url = NSURL(string: "http://www.youthexploringscience.com/partners") {
+                UIApplication.sharedApplication().openURL(url)
+            }
             
-        case 2: print("YES Website Clicked.") //open yes website url
-            break;
+        case 2: //open yes website url
+            if let url = NSURL(string: "http://www.youthexploringscience.com/") {
+                UIApplication.sharedApplication().openURL(url)
+            }
             
-        case 3: print("SLSC Website Clicked.") //open slsc website url
+        case 3: //open slsc website url
             if let url = NSURL(string: "http://www.slsc.org/") {
                 UIApplication.sharedApplication().openURL(url)
             }
             
             
-        case 4: print("Paylocity Clicked.") //open paylocity url
+        case 4: //open paylocity url
             if let url = NSURL(string: "https://login.paylocity.com/Escher/Escher_WebUI/views/login/login.aspx") {
                 UIApplication.sharedApplication().openURL(url)
             }
