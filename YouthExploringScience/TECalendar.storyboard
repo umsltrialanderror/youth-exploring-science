@@ -30,7 +30,14 @@
                             <constraint firstItem="GBK-AW-SUC" firstAttribute="centerY" secondItem="t3j-6B-ZP4" secondAttribute="centerY" id="jxi-mn-2dj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="pea-4Z-CxH"/>
+                    <navigationItem key="navigationItem" id="pea-4Z-CxH">
+                        <barButtonItem key="leftBarButtonItem" title="Refresh" id="oUu-XI-WOj">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="refreshCalendarButton:" destination="0rS-2E-d0t" id="VRy-4R-ahK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCP-sX-53z" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -13,6 +13,10 @@ class TECalendarViewController: UIViewController {
     let webView:UIWebView = UIWebView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height * 0.8))
     let url = NSURL(string: "https://calendar.google.com/calendar/embed?src=guido997%40gmail.com&ctz=America/Chicago")
     
+    @IBAction func refreshCalendarButton(sender: AnyObject) {
+        let request = NSURLRequest(URL: url!)
+        webView.loadRequest(request)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
