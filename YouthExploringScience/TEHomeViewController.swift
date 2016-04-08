@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TEHomeViewController: UIViewController {
+class TEHomeViewController: UIViewController, TEHomeDelegate {
 
     var titleView: UIImageView!
     var homeModel : TEHomeViewModel!
@@ -17,6 +17,7 @@ class TEHomeViewController: UIViewController {
         super.viewDidLoad()
         
         homeModel = TEHomeViewModel()
+        homeModel.delegate = self
         
         let image = UIImage(named: "yes_nav_logo");
         titleView = UIImageView(image: image);
@@ -27,6 +28,13 @@ class TEHomeViewController: UIViewController {
     @IBAction func mainButtonClicked(sender: AnyObject) {
         
         homeModel.ActionClicked(sender.tag)
+    }
+    
+    func home(home: TEHomeViewModel, didChangeUrl url: String) {
+        
+        if let url = NSURL(string: url) {
+            UIApplication.sharedApplication().openURL(url)
+        }
     }
     
 //    @IBAction func paylocityButtonClicked(sender: AnyObject) {

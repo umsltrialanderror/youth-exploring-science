@@ -9,38 +9,46 @@
 import Foundation
 import UIKit
 
+protocol TEHomeDelegate : class {
+    
+    func home(home: TEHomeViewModel, didChangeUrl url: String);
+}
+
 class TEHomeViewModel {
+    
+    weak var delegate: TEHomeDelegate?
     
     func ActionClicked(index: Int){
         
+        var url: String!
         switch (index){
         case 0:  //open students url
-            if let url = NSURL(string: "http://www.google.org/") {
-                UIApplication.sharedApplication().openURL(url)
-            }
+            
+            url = "http:/www.google.org/";
             
         case 1: //open partners url
-            if let url = NSURL(string: "http://www.youthexploringscience.com/partners") {
-                UIApplication.sharedApplication().openURL(url)
-            }
+            
+            url = "http://wwww.youthexploringscience.com/partners";
             
         case 2: //open yes website url
-            if let url = NSURL(string: "http://www.youthexploringscience.com/") {
-                UIApplication.sharedApplication().openURL(url)
-            }
+            
+            url = "http://www.youthexploringscience.com/";
             
         case 3: //open slsc website url
-            if let url = NSURL(string: "http://www.slsc.org/") {
-                UIApplication.sharedApplication().openURL(url)
-            }
             
+            url = "http://www.slsc.org/";
             
         case 4: //open paylocity url
-            if let url = NSURL(string: "https://login.paylocity.com/Escher/Escher_WebUI/views/login/login.aspx") {
-                UIApplication.sharedApplication().openURL(url)
-            }
             
-        default: break;
+            url = "https://login.paylocity.com/Escher/Escher_WebUI/views/login/login.aspx";
+            
+        default: //open YES
+            
+            url = "http://www.youthexploringscience.com/"
+            
+            break;
         }
+        
+        delegate?.home(self, didChangeUrl: url)
     }
 }
