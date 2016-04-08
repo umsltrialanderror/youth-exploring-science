@@ -11,7 +11,7 @@ import UIKit
 
 protocol TEHomeDelegate : class {
     
-    func home(home: TEHomeViewModel, didChangeUrl url: String);
+    func home(home: TEHomeViewModel, didSelectUrl url: String);
 }
 
 class TEHomeViewModel {
@@ -49,6 +49,6 @@ class TEHomeViewModel {
             break;
         }
         
-        delegate?.home(self, didChangeUrl: url)
+        delegate?.home(self, didSelectUrl: url)
     }
 }

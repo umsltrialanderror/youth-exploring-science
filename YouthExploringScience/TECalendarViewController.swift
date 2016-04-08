@@ -8,21 +8,19 @@
 
 import UIKit
 
-class TECalendarViewController: UIViewController {
+class TECalendarViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CalendarViewModelDelegate {
 
-    let webView:UIWebView = UIWebView(frame: CGRectMake(0, 0, UIScreen.mainScreen().bounds.width, UIScreen.mainScreen().bounds.height * 0.8))
-    let url = NSURL(string: "https://calendar.google.com/calendar/embed?src=guido997%40gmail.com&ctz=America/Chicago")
-    
-    @IBAction func refreshCalendarButton(sender: AnyObject) {
-        let request = NSURLRequest(URL: url!)
-        webView.loadRequest(request)
-    }
+    @IBOutlet weak var calendarTableView: UITableView!
+    private var calendar: TECalendarViewModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = yes_red;
-        webView.center.y = UIScreen.mainScreen().bounds.height / 2
-        view.addSubview(webView)
+        
+        calendarTableView.delegate = self;
+        calendarTableView.dataSource = self;
+        
+        calendar = TECalendarViewModel(delegate: self);
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,8 +28,29 @@ class TECalendarViewController: UIViewController {
     }
     
     override func viewWillAppear(animated: Bool) {
-        let request = NSURLRequest(URL: url!)
-        webView.loadRequest(request)
+        calendar.getWebDataForEvents()
+    }
+    
+    //MARK: Table View Data Source Methods
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        
+        return calendar.getEventCount();
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
+        
+        let event = calendar.getEventAtIndex(indexPath.row);
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier("CalendarCell")! as UITableViewCell
+        cell.textLabel?.text = event.description;
+        
+        return cell;
+    }
+    
+    //MARK: Calendar View Model Delegate Methods
+    func receivedDataForEvents(){
+        
+        calendarTableView.reloadData()
     }
     
 

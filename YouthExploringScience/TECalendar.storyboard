@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Calendar View Controller-->
         <scene sceneID="uZ0-N4-lRh">
             <objects>
-                <viewController id="0rS-2E-d0t" customClass="TECalendarViewController" customModule="YouthExploringScience" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0rS-2E-d0t" customClass="TECalendarViewController" customModule="YouthExploringScience" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wmG-m5-nRa"/>
                         <viewControllerLayoutGuide type="bottom" id="geu-Tp-g1m"/>
@@ -17,28 +18,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calendar View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBK-AW-SUC">
-                                <rect key="frame" x="245" y="290" width="111" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W8j-O5-Nv0">
+                                <rect key="frame" x="20" y="64" width="560" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CalendarCell" id="MGu-ga-KeJ">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MGu-ga-KeJ" id="zgN-W4-SSr">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GBK-AW-SUC" firstAttribute="centerX" secondItem="t3j-6B-ZP4" secondAttribute="centerX" id="Yzl-ls-Zwv"/>
-                            <constraint firstItem="GBK-AW-SUC" firstAttribute="centerY" secondItem="t3j-6B-ZP4" secondAttribute="centerY" id="jxi-mn-2dj"/>
+                            <constraint firstItem="W8j-O5-Nv0" firstAttribute="top" secondItem="wmG-m5-nRa" secondAttribute="bottom" id="In1-vK-ksn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W8j-O5-Nv0" secondAttribute="trailing" id="J4l-MQ-9JW"/>
+                            <constraint firstItem="geu-Tp-g1m" firstAttribute="top" secondItem="W8j-O5-Nv0" secondAttribute="bottom" id="fMg-t1-ApH"/>
+                            <constraint firstItem="W8j-O5-Nv0" firstAttribute="leading" secondItem="t3j-6B-ZP4" secondAttribute="leadingMargin" id="ovS-oX-XcT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="pea-4Z-CxH">
-                        <barButtonItem key="leftBarButtonItem" title="Refresh" id="oUu-XI-WOj">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <action selector="refreshCalendarButton:" destination="0rS-2E-d0t" id="VRy-4R-ahK"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="pea-4Z-CxH"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="calendarTableView" destination="W8j-O5-Nv0" id="Aba-yT-KG9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iCP-sX-53z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,7 +54,7 @@
         <!--Calendar-->
         <scene sceneID="ReC-J8-oM2">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="uti-jL-1cd" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uti-jL-1cd" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Calendar" id="3DM-IH-Zgj"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9G3-lC-tpo">

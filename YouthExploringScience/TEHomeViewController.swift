@@ -30,7 +30,7 @@ class TEHomeViewController: UIViewController, TEHomeDelegate {
         homeModel.ActionClicked(sender.tag)
     }
     
-    func home(home: TEHomeViewModel, didChangeUrl url: String) {
+    func home(home: TEHomeViewModel, didSelectUrl url: String) {
         
         if let url = NSURL(string: url) {
             UIApplication.sharedApplication().openURL(url)
