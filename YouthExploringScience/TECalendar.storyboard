@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uti-jL-1cd">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Events-->
+        <scene sceneID="uZ0-N4-lRh">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="0rS-2E-d0t" customClass="TECalendarEventListViewController" customModule="YouthExploringScience" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wmG-m5-nRa"/>
+                        <viewControllerLayoutGuide type="bottom" id="geu-Tp-g1m"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="t3j-6B-ZP4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="110" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W8j-O5-Nv0">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventCell" rowHeight="110" id="MGu-ga-KeJ" customClass="TEEventListTableViewCell" customModule="YouthExploringScience" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="600" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MGu-ga-KeJ" id="zgN-W4-SSr">
+                                            <rect key="frame" x="0.0" y="0.0" width="567" height="109.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j1c-N0-Luc">
+                                                    <rect key="frame" x="124" y="8" width="435" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dri-H1-p6T">
+                                                    <rect key="frame" x="124" y="50" width="435" height="17.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E0R-DA-yJr" customClass="TEEventCellCalendarView" customModule="YouthExploringScience" customModuleProvider="target">
+                                                    <rect key="frame" x="44" y="8" width="60" height="60"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="E0R-DA-yJr" secondAttribute="height" multiplier="1:1" id="Qpa-G1-Myu"/>
+                                                        <constraint firstAttribute="width" constant="60" id="bBN-VJ-az4"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXJ-jB-F0W">
+                                                    <rect key="frame" x="124" y="83.5" width="435" height="17.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="E0R-DA-yJr" firstAttribute="leading" secondItem="zgN-W4-SSr" secondAttribute="leadingMargin" constant="36" id="1Tq-Mw-d38"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Dri-H1-p6T" secondAttribute="trailing" id="6c4-Ih-s8V"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="TXJ-jB-F0W" secondAttribute="bottom" constant="0.5" id="Qz9-AG-qlP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="j1c-N0-Luc" secondAttribute="trailing" id="ShN-no-bTX"/>
+                                                <constraint firstItem="Dri-H1-p6T" firstAttribute="bottom" secondItem="E0R-DA-yJr" secondAttribute="bottom" id="TQs-MP-nAQ"/>
+                                                <constraint firstAttribute="topMargin" secondItem="E0R-DA-yJr" secondAttribute="top" id="bJb-C9-O0H"/>
+                                                <constraint firstItem="Dri-H1-p6T" firstAttribute="leading" secondItem="E0R-DA-yJr" secondAttribute="trailing" constant="20" id="fbo-C2-Hje"/>
+                                                <constraint firstItem="TXJ-jB-F0W" firstAttribute="leading" secondItem="Dri-H1-p6T" secondAttribute="leading" id="jQw-mG-U0r"/>
+                                                <constraint firstItem="j1c-N0-Luc" firstAttribute="leading" secondItem="E0R-DA-yJr" secondAttribute="trailing" constant="20" id="mHQ-jb-1Bj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="TXJ-jB-F0W" secondAttribute="trailing" id="ncj-6y-pKF"/>
+                                                <constraint firstAttribute="topMargin" secondItem="j1c-N0-Luc" secondAttribute="top" id="nf5-J7-v6H"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="calendarView" destination="E0R-DA-yJr" id="ub0-dl-4r8"/>
+                                            <outlet property="locationLabel" destination="TXJ-jB-F0W" id="3de-qj-KHG"/>
+                                            <outlet property="summaryLabel" destination="j1c-N0-Luc" id="1Rs-lI-lja"/>
+                                            <outlet property="timeLabel" destination="Dri-H1-p6T" id="sJl-0I-EgP"/>
+                                            <segue destination="3rL-wa-4Dt" kind="show" id="cjb-Yb-Rdj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="W8j-O5-Nv0" firstAttribute="top" secondItem="wmG-m5-nRa" secondAttribute="bottom" id="In1-vK-ksn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="W8j-O5-Nv0" secondAttribute="trailing" constant="-20" id="J4l-MQ-9JW"/>
+                            <constraint firstItem="geu-Tp-g1m" firstAttribute="top" secondItem="W8j-O5-Nv0" secondAttribute="bottom" id="fMg-t1-ApH"/>
+                            <constraint firstItem="W8j-O5-Nv0" firstAttribute="leading" secondItem="t3j-6B-ZP4" secondAttribute="leadingMargin" constant="-20" id="ovS-oX-XcT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Events" id="pea-4Z-CxH"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="eventListTableView" destination="W8j-O5-Nv0" id="pr9-K4-Y0E"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iCP-sX-53z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1762" y="-148"/>
+        </scene>
+        <!--Calendar Event View Controller-->
+        <scene sceneID="7GC-9l-yGI">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="3rL-wa-4Dt" customClass="TECalendarEventViewController" customModule="YouthExploringScience" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xaa-W5-y7g"/>
+                        <viewControllerLayoutGuide type="bottom" id="h1M-0v-BhA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u6v-Fj-0Bf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="4cX-UW-ieN">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MapCell" rowHeight="144" id="8dO-aw-p8j" customClass="TEMapViewTableViewCell" customModule="YouthExploringScience" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="49.5" width="600" height="144"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8dO-aw-p8j" id="QMx-mC-tmZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="144"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VLR-do-pKr">
+                                                    <rect key="frame" x="8" y="8" width="584" height="128"/>
+                                                </mapView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="topMargin" secondItem="VLR-do-pKr" secondAttribute="top" id="9Km-SX-E0n"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="VLR-do-pKr" secondAttribute="bottom" constant="-0.5" id="Iwn-lT-Fdc"/>
+                                                <constraint firstItem="VLR-do-pKr" firstAttribute="leading" secondItem="QMx-mC-tmZ" secondAttribute="leadingMargin" id="QOr-OM-KzP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="VLR-do-pKr" secondAttribute="trailing" id="m5p-VP-Pvs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="mapView" destination="VLR-do-pKr" id="4AX-fu-0Mh"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DescriptionCell" id="WMx-yT-ezb" customClass="TEEventDescriptionTableViewCell" customModule="YouthExploringScience" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="193.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WMx-yT-ezb" id="BdL-qZ-8sh">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIf-mR-KRd">
+                                                    <rect key="frame" x="8" y="11.5" width="584" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="15"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="IIf-mR-KRd" secondAttribute="bottom" constant="4.5" id="K8d-tr-W4J"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="IIf-mR-KRd" secondAttribute="trailing" id="WFy-Bp-DnA"/>
+                                                <constraint firstItem="IIf-mR-KRd" firstAttribute="top" secondItem="BdL-qZ-8sh" secondAttribute="topMargin" constant="3.5" id="al8-Gh-Mns"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="IIf-mR-KRd" secondAttribute="leading" id="lMd-GQ-M3Q"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="descriptionLabel" destination="IIf-mR-KRd" id="Ugb-7d-pg2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimeCell" id="FKc-dv-38S" customClass="TEEventTimeTableViewCell" customModule="YouthExploringScience" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="237.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FKc-dv-38S" id="3ok-t7-fUo">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bti-53-8Jc">
+                                                    <rect key="frame" x="27" y="11.5" width="42" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bti-53-8Jc" firstAttribute="centerY" secondItem="3ok-t7-fUo" secondAttribute="centerY" id="8vU-KS-NmB"/>
+                                                <constraint firstItem="bti-53-8Jc" firstAttribute="leading" secondItem="3ok-t7-fUo" secondAttribute="leadingMargin" constant="19" id="UEa-nY-scX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="timeLabel" destination="bti-53-8Jc" id="jdT-GU-OBO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LinkCell" id="QB3-1C-0mN" customClass="TEEventLinkTableViewCell" customModule="YouthExploringScience" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="281.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QB3-1C-0mN" id="Vhg-n8-Ytf">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdb-tc-eyn">
+                                                    <rect key="frame" x="8" y="7.5" width="584" height="30"/>
+                                                    <state key="normal" title="Web Link"/>
+                                                    <connections>
+                                                        <action selector="buttonPresses:" destination="QB3-1C-0mN" eventType="touchUpInside" id="ZBK-rg-yAU"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Zdb-tc-eyn" firstAttribute="leading" secondItem="Vhg-n8-Ytf" secondAttribute="leadingMargin" id="JRy-ta-Xt5"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Zdb-tc-eyn" secondAttribute="trailing" id="gkp-Br-gkv"/>
+                                                <constraint firstItem="Zdb-tc-eyn" firstAttribute="centerX" secondItem="Vhg-n8-Ytf" secondAttribute="centerX" id="qel-Ua-DQD"/>
+                                                <constraint firstItem="Zdb-tc-eyn" firstAttribute="centerY" secondItem="Vhg-n8-Ytf" secondAttribute="centerY" id="rHu-0g-gqk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h1M-0v-BhA" firstAttribute="top" secondItem="4cX-UW-ieN" secondAttribute="bottom" id="I0R-nw-J86"/>
+                            <constraint firstItem="4cX-UW-ieN" firstAttribute="top" secondItem="Xaa-W5-y7g" secondAttribute="bottom" id="Pe5-1U-4sA"/>
+                            <constraint firstItem="4cX-UW-ieN" firstAttribute="leading" secondItem="u6v-Fj-0Bf" secondAttribute="leadingMargin" constant="-20" id="b3N-E2-NoX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4cX-UW-ieN" secondAttribute="trailing" constant="-20" id="cs3-Ok-X3V"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="eventTableView" destination="4cX-UW-ieN" id="bKp-So-EGa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PN0-pR-EJ1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2433" y="-148"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="ReC-J8-oM2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uti-jL-1cd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calendar" id="3DM-IH-Zgj"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9G3-lC-tpo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0rS-2E-d0t" kind="relationship" relationship="rootViewController" id="cFJ-Bf-DNB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="puq-9b-L2A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="950" y="-148"/>
+        </scene>
+    </scenes>
+</document>
