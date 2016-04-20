@@ -16,7 +16,8 @@ class TECalendarViewController: UIViewController, UITableViewDelegate, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.barTintColor = yes_red;
-        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
+        self.navigationController?.navigationBar.translucent = false
         calendarTableView.delegate = self;
         calendarTableView.dataSource = self;
         
@@ -31,6 +32,25 @@ class TECalendarViewController: UIViewController, UITableViewDelegate, UITableVi
         calendar.getWebDataForEvents()
     }
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        
+        return calendar.getSeperateDateCounts();
+    }
+    
+    func tableView(tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        view.tintColor = yes_red
+        view.tintColor = UIColor(colorLiteralRed: 207.0/255, green: 67.0/255, blue: 52.0/255, alpha: 0.5);
+        
+        let header = view as! UITableViewHeaderFooterView
+        header.textLabel?.textColor = UIColor.whiteColor();
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
+        return calendar.getDateTitleAtIndex(section);
+    }
+    
     //MARK: Table View Data Source Methods
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         
@@ -42,7 +62,7 @@ class TECalendarViewController: UIViewController, UITableViewDelegate, UITableVi
         let event = calendar.getEventAtIndex(indexPath.row);
         
         let cell = tableView.dequeueReusableCellWithIdentifier("CalendarCell")! as UITableViewCell
-        cell.textLabel?.text = event.description;
+        cell.textLabel?.text = event.summary;
         
         return cell;
     }
@@ -54,14 +74,17 @@ class TECalendarViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        
+        let vc = segue.destinationViewController as! TECalendarEventViewController
+        vc.navigationController?.navigationItem.title = "Hello";
+        
+        if let indexPath = self.calendarTableView.indexPathForSelectedRow {
+            
+        }
     }
-    */
 
 }

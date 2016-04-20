@@ -15,6 +15,7 @@ class TEMainTabController: UITabBarController {
 
         // Do any additional setup after loading the view.
         self.tabBar.tintColor = UIColor.whiteColor()
+        self.tabBar.translucent = false
     }
 
     override func didReceiveMemoryWarning() {

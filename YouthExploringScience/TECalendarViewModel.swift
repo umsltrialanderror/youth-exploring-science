@@ -16,7 +16,8 @@ protocol CalendarViewModelDelegate: class{
 class TECalendarViewModel: NSObject {
     
     weak var delegate: CalendarViewModelDelegate?
-    private var eventsArray: [TECalendarEvent]?
+    private var eventsArray: [TEGoogleCalendarEvent]?
+    private var datesArray: [NSDate]?
     
     init(delegate: CalendarViewModelDelegate){
         super.init();
@@ -31,13 +32,33 @@ class TECalendarViewModel: NSObject {
 
             for event in dataArray{
                 
-                guard let description = event["description"] as? String else {
-                    return;
-                }
+//                if let description = event["description"] as? String {
+//                    
+//                    e.description = description;
+//                }
+//                
+//                if let summary = event["summary"] as? String{
+//                    
+//                    e.summary = summary
+//                }
+//                guard let html = event["htmlLink"] as? String, let start = event["start"] as? NSDictionary, let end = event["end"] as? NSDictionary, let id = event["id"] as? String else {
+//                    //return;
+//                    break;
+//                }
                 
-                let e = TECalendarEvent()
-                e.description = description
-                self.eventsArray?.append(e)
+                let e1 = TEGoogleCalendarEvent(jsonObject: event as! NSDictionary)
+                
+//                let formatter = NSDateFormatter();
+//                formatter.dateFormat = "yyyy-MM-dd"
+//                e.end = TECalendarTime()
+//                e.start = TECalendarTime()
+//                e.start?.date = formatter.dateFromString(start["date"] as! String)
+//                e.end?.date = formatter.dateFromString(end["date"] as! String)
+//                //e.endDate = formatter.dateFromString(end.valueForKey("dateTime") as! String)
+//                //e.startDate = formatter.dateFromString(start.valueForKey("dateTime") as! String)
+//                e.htmlLink = html
+//                e.id = id
+                self.eventsArray?.append(e1)
             }
             
             self.delegate?.receivedDataForEvents()
@@ -53,8 +74,31 @@ class TECalendarViewModel: NSObject {
         return eventsArray!.count;
     }
     
-    func getEventAtIndex(index: Int) -> TECalendarEvent{
+    func getEventAtIndex(index: Int) -> TEGoogleCalendarEvent{
         
         return eventsArray![index];
+    }
+    
+    
+    func getSeperateDateCounts() -> Int{
+        
+        guard let _ = datesArray else{
+            return 1;
+        }
+        
+        return 1
+//        return datesArray!.count;
+    }
+    
+    func getDateTitleAtIndex(index: Int)->String{
+        
+        return "April 10, 2016";
+    }
+    
+    //Method should iterate through all events and acquire their start dates...
+    //This method will return the array of start dates
+    func getEventStartDates() -> [String]{
+        
+        return ["Hello"];
     }
 }
